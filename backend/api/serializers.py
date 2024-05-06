@@ -35,3 +35,7 @@ class LoginSerializer(serializers.Serializer):
 
         return data
 
+class UserSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = CustomUser
+		fields = ('email', 'username')

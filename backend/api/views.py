@@ -29,6 +29,7 @@ class LoginView(APIView):
         if serializer.is_valid():
             user = serializer.validated_data['user']
             login(request, user)
+            print(user)
             return Response({'username': user.username}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -38,6 +39,7 @@ class LogoutView(APIView):
 
     def post(self, request):
         logout(request)
+        
         return Response(status=status.HTTP_200_OK)
     
 

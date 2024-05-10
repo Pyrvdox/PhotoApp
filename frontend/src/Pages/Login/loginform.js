@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import client from '../../api';
+import client from '../../utils/api';
 
 const LoginForm = () => {
   

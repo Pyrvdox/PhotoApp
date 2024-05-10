@@ -27,17 +27,12 @@ const RegisterForm = () => {
     e.preventDefault();
     try {
       console.log(registerData)
-      if (registerData.password === registerData.password2){
-        const resp = await client.post('api/register/',{
+      const resp = await client.post('api/register/',{
           username: registerData.username,
           password: registerData.password
-        })
-      }
-      if (resp.status === 200) { 
+      }) 
         console.log('Udana rejestracja!');
         navigate("/")
-      }
-      
     }
     catch (error){
       console.error('Error:', error);

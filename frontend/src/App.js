@@ -4,7 +4,7 @@ import LoginPage from "./Pages/Login/loginpage";
 import LogoutPage from "./Pages/Logout/logoutpage";
 import MainApp from "./Pages/Main/mainapp";
 import RegisterPage from "./Pages/Register/registerpage";
-
+import Navbar from "./Pages/Main/navbar";
 
 
 
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <div>
-      
+        <Navbar />
         <Routes>
           <Route path="/" element={<LoginPage />}/>
           <Route path="/register" element={<RegisterPage />} />

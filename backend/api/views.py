@@ -22,7 +22,7 @@ class RegisterView(APIView):
 
 class LoginView(APIView):
     permission_classes = (permissions.AllowAny,)
-    authentication_classes = (SessionAuthentication,)
+    authentication_classes = ()
 
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
